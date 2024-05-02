@@ -35,48 +35,27 @@ public class Practice5 {
 
 		while (true) {
 			ymd[2] = sc.nextInt();
-			if (p5.isLeapYear(ymd[0]) == true) {
-				if (p5.monthType(ymd[1]) == 1) {
-					if (ymd[2] >= 1 && ymd[2] <= 31) {
-						p5.countDays(ymd[1], ymd[2], true);
-						break;
-					} else {
-						System.out.println(ymd[1] + "月只有1~31號，請輸入正確的日期：");
-					}
-				} else if (p5.monthType(ymd[1]) == 3) {
-					if (ymd[2] >= 1 && ymd[2] <= 30) {
-						p5.countDays(ymd[1], ymd[2], true);
-						break;
-					} else {
-						System.out.println(ymd[1] + "月只有1~30號，請輸入正確的日期：");
-					}
+			if (p5.monthType(ymd[1]) == 1) {
+				if (ymd[2] >= 1 && ymd[2] <= 31) {
+					break;
 				} else {
+					System.out.println(ymd[1] + "月只有1~31號，請輸入正確的日期：");
+				}
+			} else if (p5.monthType(ymd[1]) == 3) {
+				if (ymd[2] >= 1 && ymd[2] <= 30) {
+					break;
+				} else {
+					System.out.println(ymd[1] + "月只有1~30號，請輸入正確的日期：");
+				}
+			} else {
+				if (p5.isLeapYear(ymd[0]) == true) {
 					if (ymd[2] >= 1 && ymd[2] <= 29) {
-						p5.countDays(ymd[1], ymd[2], true);
 						break;
 					} else {
 						System.out.println(ymd[1] + "月只有1~29號，請輸入正確的日期");
 					}
-				}
-
-			} else {
-				if (p5.monthType(ymd[1]) == 1) {
-					if (ymd[2] >= 1 && ymd[2] <= 31) {
-						p5.countDays(ymd[1], ymd[2], false);
-						break;
-					} else {
-						System.out.println(ymd[1] + "月只有1~31號，請輸入正確的日期：");
-					}
-				} else if (p5.monthType(ymd[1]) == 3) {
-					if (ymd[2] >= 1 && ymd[2] <= 30) {
-						p5.countDays(ymd[1], ymd[2], false);
-						break;
-					} else {
-						System.out.println(ymd[1] + "月只有1~30號，請輸入正確的日期：");
-					}
 				} else {
 					if (ymd[2] >= 1 && ymd[2] <= 28) {
-						p5.countDays(ymd[1], ymd[2], false);
 						break;
 					} else {
 						System.out.println(ymd[1] + "月只有1~28號，請輸入正確的日期");
@@ -84,6 +63,12 @@ public class Practice5 {
 				}
 
 			}
+
+		}
+		if (p5.isLeapYear(ymd[0]) == true) {
+			p5.countDays(ymd[1], ymd[2], true);
+		} else {
+			p5.countDays(ymd[1], ymd[2], false);
 		}
 
 	}

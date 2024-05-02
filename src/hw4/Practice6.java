@@ -10,7 +10,7 @@ public class Practice6 {
 		for (int i = 0; i < array[1].length; i++) {
 			scoreHighest[i] = array[0][i];
 			for (int j = 0; j < array.length - 1; j++) {
-				if (array[j][i] < array[j + 1][i] && scoreHighest[i] < array[j + 1][i]) {
+				if (scoreHighest[i] < array[j + 1][i]) {
 					scoreHighest[i] = array[j + 1][i];
 				}
 			}
