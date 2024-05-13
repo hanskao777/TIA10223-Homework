@@ -11,13 +11,13 @@ public class CalTest {
 		while (true) {
 			try {
 				System.out.println("請輸入x的值：");
-				int x = sc.nextInt();
+				c.setX(sc.nextInt());
 				System.out.println("請輸入y的值：");
-				int y = sc.nextInt();
-				System.out.printf("%d的%d次方等於%d\n", x, y, c.powerXY(x, y));
+				c.setY(sc.nextInt());
+				System.out.printf("%d的%d次方等於%d\n", c.getX(), c.getY(), c.powerXY(c.getX(), c.getY()));
 				System.out.println("結束請輸入\"0\"，繼續請輸入任意字元");
 				String s = sc.next();
-				if(s.equals("0")) {
+				if (s.equals("0")) {
 					sc.close();
 					break;
 				}

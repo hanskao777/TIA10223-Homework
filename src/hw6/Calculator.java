@@ -1,8 +1,31 @@
 package hw6;
 
 public class Calculator {
+	private int x, y;
+
 	public Calculator() {
 
+	}
+
+	public Calculator(int x, int y) {
+		setX(x);
+		setY(y);
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	public int getY() {
+		return y;
 	}
 
 	public int powerXY(int x, int y) throws CalException {
