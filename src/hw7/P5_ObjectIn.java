@@ -21,7 +21,7 @@ public class P5_ObjectIn {
 			fis.close();
 
 		} catch (FileNotFoundException fe) {
-			System.out.println("找不到檔案");
+			System.out.println("找不到檔案啦！你要先去執行第四題生一個Object.ser檔案出來~");
 		} catch (IOException ie) {
 			ie.printStackTrace();
 		} catch (ClassNotFoundException ce) {
