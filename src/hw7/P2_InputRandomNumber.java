@@ -15,7 +15,7 @@ public class P2_InputRandomNumber {
 			PrintStream ps = new PrintStream(bos);
 
 			for (int i = 1; i <= 10; i++) {
-				int num = (int) (Math.random() * 1000);
+				int num = (int) (Math.random() * 1000 + 1);
 				ps.print(num + " ");
 			}
 			ps.close();

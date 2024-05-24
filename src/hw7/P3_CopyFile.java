@@ -21,24 +21,24 @@ public class P3_CopyFile {
 			FileReader fr = new FileReader(f1);
 			BufferedReader br = new BufferedReader(fr);
 			String s = "";
-			
+
 			FileWriter fw = new FileWriter(f2);
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter ws = new PrintWriter(bw);
-			
+
 			while ((s = br.readLine()) != null) {
 				ws.println(s);
 			}
-			br.close();
-			fr.close();
 			ws.close();
 			bw.close();
 			fw.close();
-			
+			br.close();
+			fr.close();
+
 			System.out.println("複製成功");
 		} catch (IOException e) {
 			System.out.println("格式錯誤");
 		}
-		
+
 	}
 }
