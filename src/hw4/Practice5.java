@@ -15,7 +15,7 @@ public class Practice5 {
 			if (ymd[0] >= 1583) {
 				break;
 			} else {
-				System.out.println("1583年前運行之年曆規則與現時不同，請重新輸入1583年以後的年份：");// 有空會補1852年的運算
+				System.out.println("1583年前運行之年曆規則與現時不同，請重新輸入1583年以後的年份：");// 有空會補1582年的運算
 			}
 
 		}
@@ -70,7 +70,7 @@ public class Practice5 {
 		} else {
 			p5.countDays(ymd[1], ymd[2], false);
 		}
-
+		sc.close();
 	}
 
 	public void countDays(int month, int day, boolean isLeapYear) {
